@@ -1,0 +1,57 @@
+<%include ../header%>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <center>
+    <title>Quản lý nhân viên</title>
+    <h1>Staff</h1>
+    <div class="btn btn-sm btn-danger">
+      <a href="staff/insert" style="color: white;">Thêm nhân viên</a>
+    </div>
+  </center>
+  </br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Mã nhân viên</th>
+        <th scope="col">Tên nhân viên</th>
+        <th scope="col">Ngày sinh</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+   
+    <tbody>
+      <%i=1%>
+        <%  for(var st of listStaffs) { %>
+          <tr>
+            <td>
+              <%=i++%>
+            </td>
+            <td>
+              <%=st.code%>
+            </td>
+            <td>
+              <%=st.name%>
+            </td>
+            <td>
+              <%=st.birthday%>
+            </td>
+            <td>
+              <div>
+                <a href="/staff/update/<%=st.id %>">
+                  <font color="green" size="3">
+                    <i class="fas fa-edit"></i>
+                  </font>
+                </a>
+                <a href="/staff/delete/<%=st.id %>" onclick="return confirm('Bạn có muốn xóa không ?')">
+                  <font color="red" size="3">
+                    <i class="fas fa-trash-alt"></i>
+                  </font>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <%}%>
+    </tbody>
+  </table>
+  <%include ../footer%>

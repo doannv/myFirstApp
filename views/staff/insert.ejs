@@ -1,0 +1,19 @@
+<%include ../header%>
+<title>Thêm nhân viên</title>
+<h2><center> Thêm nhân viên</center></h2>
+ <form action="addStaff" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Mã NV</label>
+    <input type="text" class="form-control" name="code" placeholder="Mã NV ">
+  </div>
+  <div class="form-group">
+    <label>Tên NV</label>
+    <input type="text" class="form-control" name="name" placeholder="Tên nhân viên">
+  </div>
+  <div class="form-group">
+    <label>Ngày sinh</label>
+    <input type="text" class="form-control" name="birthday" placeholder="Ngày sinh">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </table>
+<%include ../footer%>

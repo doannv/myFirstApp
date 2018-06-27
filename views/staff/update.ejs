@@ -1,0 +1,24 @@
+<%include ../header%>
+  <title>Sửa nhân viên</title>
+  <h2>
+    <center> Sửa nhân viên</center>
+  </h2>
+  <form action="" method="post">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Mã NV</label>
+      <input type="text" class="form-control" name="code" value="<%=staffs[0].code%>">
+    </div>
+    <div class="form-group">
+      <label>Tên NV</label>
+      <input type="text" class="form-control" name="name" value="<%=staffs[0].name%>">
+    </div>
+    <div class="form-group">
+      <label>Ngày sinh</label>
+      <input type="text" class="form-control" name="birthday" value="<%=staffs[0].birthday%>">
+    </div>
+    <div class="form-group">
+      <input id="prodId" name="id" type="hidden" value="<%=staffs[0].id%>">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </table>
+    <%include ../footer%>
